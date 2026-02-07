@@ -1,2 +1,2 @@
-let hell: string = "hello";
-console.log(hell);
+let helll: string = "hello";
+console.log(helll);
