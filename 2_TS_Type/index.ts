@@ -9,3 +9,7 @@ const person = {
   },
   age: 21
 }
+
+const fruits = ['apple', 'banana',1] // 型推論
+const fruits2: string[] = ['apple', 'banana'] // 型指定
+const fruits3: (string|number)[] = ['apple', 'banana'] // 型指定 union型
