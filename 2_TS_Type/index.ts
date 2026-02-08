@@ -15,3 +15,15 @@ const fruits2: string[] = ['apple', 'banana'] // 型指定
 const fruits3: (string|number)[] = ['apple', 'banana'] // 型指定 union型
 
 const book: [string, number, boolean] = ['business', 1500, false] // リストの型をタプルで指定
+
+enum CoffeeSize { //選択肢のオブジェクトを作るイメージ
+	SHORT = 'SHORT',
+	TALL = 'TALL',
+	GRANDE = 'GRANDE',
+	VENTI = 'VENTI'
+}
+
+const coffee = {
+	hot: true,
+	size: CoffeeSize.TALL // 上の列挙型のおかげで選択肢の中の値を使える
+}
