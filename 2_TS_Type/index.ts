@@ -51,4 +51,6 @@ const add = (num1: number, num2: number) => {
 const sayHello = (): void => {
   console.log('hello')
 }
-console.log(sayHello())
+
+const anotherAdd: (n1: number, n2: number) => number = add
+const doubleNumber: (num: number) => number = num => num * 2; 
