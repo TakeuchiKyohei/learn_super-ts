@@ -33,3 +33,8 @@ let anything2: [any] = [1]; // どんな型でも入れられる
 let banana: string = 'banana'
 banana = anything // anyが絡むとなんでも入る
 
+let unionType: number | string = 10; // 2種類以上の型を扱いたい時
+unionType.toString // numが入っている時はnumのメソッドが
+unionType = 'hello';
+unionType.toUpperCase // strが入っている時はstrのメソッドが
+let unionType2: (number | string)[] = [1, 'hello']
