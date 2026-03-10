@@ -47,3 +47,8 @@ let clothSize: ClothSize = 'l' //literal + unionでenumのような制限をか�
 const add = (num1: number, num2: number) => {
   return num1 + num2
 }
+
+const sayHello = (): void => {
+  console.log('hello')
+}
+console.log(sayHello())
