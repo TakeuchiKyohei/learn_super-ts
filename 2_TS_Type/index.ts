@@ -27,3 +27,9 @@ const coffee = {
 	hot: true,
 	size: CoffeeSize.TALL // 上の列挙型のおかげで選択肢の中の値を使える
 }
+
+let anything: any = true; // どんな型でも入れられる
+let anything2: [any] = [1]; // どんな型でも入れられる
+let banana: string = 'banana'
+banana = anything // anyが絡むとなんでも入る
+
