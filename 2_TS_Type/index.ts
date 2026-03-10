@@ -39,6 +39,7 @@ unionType = 'hello';
 unionType.toUpperCase // strが入っている時はstrのメソッドが
 let unionType2: (number | string)[] = [1, 'hello']
 
+type ClothSize = 's' | 'm' | 'l' 
 const apple: 'apple' = 'apple'
 const apple2 = 'apple' // constで描き始めたら定義を省略できる
-let clothSize: 's' | 'm' | 'l' = 'l' //literal + unionでenumのような制限をかけることができる
+let clothSize: ClothSize = 'l' //literal + unionでenumのような制限をかけることができる
