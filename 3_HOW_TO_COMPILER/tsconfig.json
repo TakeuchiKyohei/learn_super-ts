@@ -40,5 +40,19 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
-  }
+  },
+  "include": [ //コンパイルするものを設定
+    "index.ts" 
+    // ワイルドカードも使えるし"exclude"でしたことのある設定は設定可能
+  ],
+  "exclude": [ //コンパイルしない設定
+    "compiler.ts", //rootディレクトリのもの
+    "*/compiler.ts", //rootディレクトリ/フォルダ/内のもの
+    "**/compiler.ts", //どこにいても
+    "*.spec.ts", //ワイルドカード指定ができる
+    "node_modules", // "exclude"を記載しない場合は自動でコンパイルされないようになっているが、"exclude"を記載する場合は明示的に書かなければいけない
+  ],
+  "files": [ //ファイルを指定
+    "tem/compiler.ts"
+  ]
 }
