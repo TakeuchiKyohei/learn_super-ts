@@ -77,3 +77,21 @@ if (typeof inputUnknown === 'string') {
 
 28 satisfies number // 型チェック
 const age = 28 satisfies number
+
+function errorThrow(message: string){ //型推論で返り値はvoidになる
+  throw new Error(message);
+}
+
+const errorThrow2 = (message: string) => { //型推論で返り値はneverになる
+  throw new Error(message);
+}
+
+//neverの利用場面
+function getSizeName (size: 's'|'m'|'l'){
+  switch(size){
+    case "s":return 'small'
+    case "m":return 'medium'
+    case "l":return 'large'
+    default : size satisfies never //　neverかどうかをみることによって漏れをチェックすることができる
+  }
+}
