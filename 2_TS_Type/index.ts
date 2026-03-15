@@ -74,3 +74,6 @@ inputUnknown = true
 if (typeof inputUnknown === 'string') {
   inputString = inputUnknown; //これは型を特定しているので代入可能
 }
+
+28 satisfies number // 型チェック
+const age = 28 satisfies number
