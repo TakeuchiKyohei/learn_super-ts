@@ -64,3 +64,13 @@ function doubleAndHandle(num: number, cb: (num: number) => number): void {
 doubleAndHandle(21, doubleNum => {
   return doubleNum
 })
+
+let inputUnknown: unknown;
+let inputString: string;
+inputUnknown = 'hello';
+inputUnknown = 27;
+inputUnknown = true
+// inputString = inputUnknown; // これは型特定していないので代入できない
+if (typeof inputUnknown === 'string') {
+  inputString = inputUnknown; //これは型を特定しているので代入可能
+}
