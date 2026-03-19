@@ -8,7 +8,7 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
-    "target": "esnext",
+    "target": "es6", // JSバージョン指定
     "types": [],
     // For nodejs:
     // "lib": ["esnext"],
