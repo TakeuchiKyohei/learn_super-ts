@@ -15,13 +15,16 @@
     //   "ES6",
     //   "DOM"
     // ],
+    // "allowJs": true,
+    // "checkJs": true, // JSファイルもエラーチェックする
+    // "jsx": "preserve", //リアクトのために使う
+    "declaration": true,
+    "declarationMap": true,
     // "types": ["node"],
     // and npm install -D @types/node
 
     // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "sourceMap": true, // JS→TSのマッピング
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
@@ -37,7 +40,6 @@
 
     // Recommended Options
     "strict": true,
-    "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
