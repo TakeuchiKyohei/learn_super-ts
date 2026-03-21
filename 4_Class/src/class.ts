@@ -13,6 +13,7 @@ abstract class Person {
 }
 
 class Teacher extends Person {
+  private static instance: Teacher;
   get subjects() {
     if (!this._subject) {
       throw new Error("Subject is not defined.");
@@ -25,13 +26,21 @@ class Teacher extends Person {
     }
     this._subject = value;
   }
-  constructor(name: string, age: number, private _subject: string) {
+  private constructor(name: string, age: number, private _subject: string) {
     super(name, age);
   }
   explainJob(): void {
     console.log(`I teach ${this._subject}.`);
   }
+  static getInstance(name: string, age: number, subject: string) {
+    if (!Teacher.instance) {
+      this.instance = new Teacher(name, age, subject);
+    }
+    return this.instance;
+  }
 }
 
-const teacher = new Teacher("Taro", 30, "Science");
+const teacher = Teacher.getInstance("Taro", 30, "Science");
+const teacher2 = Teacher.getInstance("Taro", 31, "Science");
 teacher.greet();
+teacher2.greet();

@@ -34,6 +34,14 @@ class Teacher extends Person {
     explainJob() {
         console.log(`I teach ${this._subject}.`);
     }
+    static getInstance(name, age, subject) {
+        if (!Teacher.instance) {
+            this.instance = new Teacher(name, age, subject);
+        }
+        return this.instance;
+    }
 }
-const teacher = new Teacher("Taro", 30, "Science");
+const teacher = Teacher.getInstance("Taro", 30, "Science");
+const teacher2 = Teacher.getInstance("Taro", 31, "Science");
 teacher.greet();
+teacher2.greet();
