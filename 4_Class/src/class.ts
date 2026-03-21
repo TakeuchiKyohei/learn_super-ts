@@ -3,7 +3,7 @@ class Person {
   constructor(initName: string) {
     this.name = initName;
   }
-  greet(this: { name: string }) { // thisの型を指定
+  greet(this: Person) { // thisの型を指定
         console.log(`Hello, I'm ${this.name}.`);
     }
 }
@@ -13,6 +13,6 @@ taro.greet();
 
 const anotherTaro = {
   name: "Taro",
-  anotherGreet: taro.greet
+  greet: taro.greet
 }
-anotherTaro.anotherGreet();
+anotherTaro.greet();
