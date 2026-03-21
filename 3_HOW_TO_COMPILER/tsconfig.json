@@ -45,6 +45,11 @@
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "strictBindCallApply": false,
+
+    "noUnusedLocals": false, // 使用していないローカル変数のエラーチェック
+    "noUnusedParameters": false, // 使用していない関数の引数のエラーチェック
+    "noImplicitReturns": false, // 暗黙的なリターンのチェック
   },
   "include": [ //コンパイルするものを設定
     "index.ts" 
