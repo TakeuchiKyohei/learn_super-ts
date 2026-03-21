@@ -13,14 +13,28 @@ class Person {
     }
 }
 class Teacher extends Person {
-    constructor(name, age, subject) {
+    get subjects() {
+        if (!this._subject) {
+            throw new Error("Subject is not defined.");
+        }
+        return this._subject;
+    }
+    set subjects(value) {
+        if (!value) {
+            throw new Error("Subject cannot be empty.");
+        }
+        this._subject = value;
+    }
+    constructor(name, age, _subject) {
         super(name, age);
-        this.subject = subject;
+        this._subject = _subject;
     }
     greet() {
         console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old.`);
-        console.log(`I teach ${this.subject.join(", ")}.`);
+        console.log(`I teach ${this._subject}.`);
     }
 }
-const teacher = new Teacher("Taro", 30, ["Math", "Science"]);
+const teacher = new Teacher("Taro", 30, "Science");
+teacher.subjects = "Math";
+console.log(teacher.subjects);
 teacher.greet();
