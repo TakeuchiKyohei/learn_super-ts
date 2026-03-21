@@ -50,6 +50,8 @@
     "noUnusedLocals": false, // 使用していないローカル変数のエラーチェック
     "noUnusedParameters": false, // 使用していない関数の引数のエラーチェック
     "noImplicitReturns": false, // 暗黙的なリターンのチェック
+
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字をチェック
   },
   "include": [ //コンパイルするものを設定
     "index.ts" 
