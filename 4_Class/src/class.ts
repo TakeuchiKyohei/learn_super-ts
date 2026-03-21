@@ -1,4 +1,5 @@
 class Person {
+  static species = "Homo sapiens";
   constructor(public readonly name: string, protected age: number) {
   }
   incrementAge() {
@@ -35,3 +36,5 @@ const teacher = new Teacher("Taro", 30, "Science");
 teacher.subjects = "Math";
 console.log(teacher.subjects);
 teacher.greet();
+
+console.log(Person.species);
