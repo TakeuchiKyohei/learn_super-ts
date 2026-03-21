@@ -8,17 +8,23 @@
     // Environment Settings
     // See also https://aka.ms/tsconfig/module
     "module": "nodenext",
-    "target": "esnext",
+    "target": "es6", // JSバージョン指定
     "types": [],
     // For nodejs:
-    // "lib": ["esnext"],
+    // "lib": [ // TSが提供している定義ファイルの指定
+    //   "ES6",
+    //   "DOM"
+    // ],
+    // "allowJs": true,
+    // "checkJs": true, // JSファイルもエラーチェックする
+    // "jsx": "preserve", //リアクトのために使う
+    "declaration": true,
+    "declarationMap": true,
     // "types": ["node"],
     // and npm install -D @types/node
 
     // Other Outputs
-    "sourceMap": true,
-    "declaration": true,
-    "declarationMap": true,
+    "sourceMap": true, // JS→TSのマッピング
 
     // Stricter Typechecking Options
     "noUncheckedIndexedAccess": true,
@@ -34,12 +40,18 @@
 
     // Recommended Options
     "strict": true,
-    "jsx": "react-jsx",
     "verbatimModuleSyntax": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
     "moduleDetection": "force",
     "skipLibCheck": true,
+    "strictBindCallApply": false,
+
+    "noUnusedLocals": false, // 使用していないローカル変数のエラーチェック
+    "noUnusedParameters": false, // 使用していない関数の引数のエラーチェック
+    "noImplicitReturns": false, // 暗黙的なリターンのチェック
+
+    "forceConsistentCasingInFileNames": true, // ファイル名の大文字小文字をチェック
   },
   "include": [ //コンパイルするものを設定
     "index.ts" 
