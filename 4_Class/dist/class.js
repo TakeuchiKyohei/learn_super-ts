@@ -10,6 +10,7 @@ class Person {
     }
     greet() {
         console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old.`);
+        this.explainJob();
     }
 }
 Person.species = "Homo sapiens";
@@ -30,13 +31,9 @@ class Teacher extends Person {
         super(name, age);
         this._subject = _subject;
     }
-    greet() {
-        console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old.`);
+    explainJob() {
         console.log(`I teach ${this._subject}.`);
     }
 }
 const teacher = new Teacher("Taro", 30, "Science");
-teacher.subjects = "Math";
-console.log(teacher.subjects);
 teacher.greet();
-console.log(Person.species);

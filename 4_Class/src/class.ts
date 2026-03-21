@@ -1,4 +1,4 @@
-class Person {
+abstract class Person {
   static species = "Homo sapiens";
   constructor(public readonly name: string, protected age: number) {
   }
@@ -7,7 +7,9 @@ class Person {
   }
   greet(this: Person) { // thisの型を指定
         console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old.`);
+        this.explainJob();
     }
+  abstract explainJob(): void;
 }
 
 class Teacher extends Person {
@@ -26,15 +28,10 @@ class Teacher extends Person {
   constructor(name: string, age: number, private _subject: string) {
     super(name, age);
   }
-  greet() { // thisの型を指定
-        console.log(`Hello, I'm ${this.name} and I'm ${this.age} years old.`);
-        console.log(`I teach ${this._subject}.`);
-    }
+  explainJob(): void {
+    console.log(`I teach ${this._subject}.`);
+  }
 }
 
 const teacher = new Teacher("Taro", 30, "Science");
-teacher.subjects = "Math";
-console.log(teacher.subjects);
 teacher.greet();
-
-console.log(Person.species);
