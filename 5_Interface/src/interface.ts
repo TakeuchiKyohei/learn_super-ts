@@ -20,3 +20,5 @@ class Developer implements Human {
     console.log(`${message}, I'm ${this.name} and I'm ${this.age} years old.`);
   }
 }
+
+const user:Human = new Developer("Hanako", 25, "TypeScript"); // 構造的部分型のおかげでlanguageはなくてもDeveloperはHumanとして扱える
