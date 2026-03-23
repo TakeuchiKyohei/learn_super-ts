@@ -1,5 +1,5 @@
 interface Human {
-  name: string;
+  readonly name: string; // 読み取り専用にできる
   age: number;
   // greet: (message: string) => void; この書き方もできる
   greet(message: string): void;
