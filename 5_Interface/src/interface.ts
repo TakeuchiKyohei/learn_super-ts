@@ -12,3 +12,11 @@ const human: Human = {
     console.log(`${message}, I'm ${this.name} and I'm ${this.age} years old.`);
   }
 }
+
+class Developer implements Human {
+  constructor(public name: string, public age: number, private language: string) { // implementsしたプロパティはpublicでなければならない
+  }
+  greet(message: string): void {
+    console.log(`${message}, I'm ${this.name} and I'm ${this.age} years old.`);
+  }
+}
