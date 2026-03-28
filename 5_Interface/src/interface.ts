@@ -1,3 +1,9 @@
+// type addFunc = (n1: number, n2: number) => number; 
+interface addFunc {
+  (n1: number, n2: number): number;
+}
+const addFunc: addFunc = (n1, n2) => n1 + n2;
+
 type NameAble = {
   readonly name: string; // 読み取り専用にできる
 }
