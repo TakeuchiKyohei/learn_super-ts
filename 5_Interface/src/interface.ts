@@ -6,6 +6,7 @@ const addFunc: addFunc = (n1, n2) => n1 + n2;
 
 type NameAble = {
   readonly name: string; // 読み取り専用にできる
+  nickName?: string; //オプショナルプロパティ
 }
 
 interface Human extends NameAble { // interfaceはextendsで継承できる
