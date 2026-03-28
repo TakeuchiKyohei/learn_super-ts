@@ -1,5 +1,8 @@
-interface Human {
+type NameAble = {
   readonly name: string; // 読み取り専用にできる
+}
+
+interface Human extends NameAble { // interfaceはextendsで継承できる
   age: number;
   // greet: (message: string) => void; この書き方もできる
   greet(message: string): void;
