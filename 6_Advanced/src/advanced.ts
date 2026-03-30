@@ -93,5 +93,15 @@ const input = document.getElementById("input") as HTMLInputElement;// リアク�
 const input2 = <HTMLInputElement>document.getElementById("input2");
 input.value = "Hello";
 
+// インデックスシグネチャについて
+interface Designer {
+  name: string;
+  [index: string]: string; // これがインデックスシグネチャ
+}
+const designer: Designer = {
+  name: "Quill",
+}
+designer.name.toUpperCase();
+designer.bar // あたかもあるように振る舞うことができる
 
 export {}; // 独立したものと扱うために一時的に追加
