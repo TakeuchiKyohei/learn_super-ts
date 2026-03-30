@@ -88,6 +88,10 @@ function havePet(pet: Pet) {
   }
 }
 
+// 型アサーション 例：HTMLの要素を取得する際など
+const input = document.getElementById("input") as HTMLInputElement;// リアクトとかを使う場合は紛らわしいのでasを使った方がいいかも
+const input2 = <HTMLInputElement>document.getElementById("input2");
+input.value = "Hello";
 
 
 export {}; // 独立したものと扱うために一時的に追加
