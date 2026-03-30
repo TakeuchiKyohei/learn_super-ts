@@ -106,4 +106,19 @@ const designer: Designer = {
 designer.name.toUpperCase();
 designer.bar // あたかもあるように振る舞うことができる
 
+// Optional Chaining
+interface DownloadedData {
+  id: number;
+  user?: {
+    name?: {
+      first: string;
+      last: string;
+    }
+  }
+}
+const downloadedData: DownloadedData = {
+  id: 1,
+}
+console.log(downloadedData.user?.name?.first);// ?をつけることでエラーを回避できる
+
 export {}; // 独立したものと扱うために一時的に追加
