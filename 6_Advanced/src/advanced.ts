@@ -9,7 +9,7 @@ type Blogger = {
 }
 type EngineerBlogger = Engineer & Blogger;
 
-const uill: EngineerBlogger = {
+const quill: EngineerBlogger = {
   name: "Quill",
   role: "Frontend Engineer",
   follower: 1000,
@@ -55,12 +55,14 @@ function describeProfile(nomadWorker: NomadWorker) {
 
 // 3: instanceof
 class Dog {
+  kind: "dog" = "dog";
   speak() {
     console.log("Bow-wow");
   }
 }
 
 class Bird {
+  kind: "bird" = "bird";
   speak() {
     console.log("tweeetttt");
   }
@@ -71,7 +73,21 @@ class Bird {
 type Pet = Dog | Bird;
 function havePet(pet: Pet) {
   pet.speak();
+  // タグ付きユニオン
+  switch (pet.kind) {
+    case "dog":
+      pet.speak();
+      break;
+    case "bird":
+      pet.speak();
+      pet.fly();
+      break;
+  }
   if (pet instanceof Bird) {
     pet.fly();
   }
 }
+
+
+
+export {}; // 独立したものと扱うために一時的に追加
