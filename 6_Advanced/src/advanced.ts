@@ -121,4 +121,7 @@ const downloadedData: DownloadedData = {
 }
 console.log(downloadedData.user?.name?.first);// ?をつけることでエラーを回避できる
 
+// Nullish Coalescing
+const userData = downloadedData.user ?? "no-user"; // nullかundefinedの場合は"no-user"を返す
+
 export {}; // 独立したものと扱うために一時的に追加
