@@ -34,11 +34,13 @@ const uil: EngineerBlogger2 = {
 
 // 3つのtype guard
 // 1: typeof
+function toUpperCase(x: string): string; // オーバーロード
+function toUpperCase(x: number): number;
 function toUpperCase(x: string | number) {
   if (typeof x === "string") {
     return x.toUpperCase();
   }
-  return "";
+  return x;
 }
 
 // 2: in
