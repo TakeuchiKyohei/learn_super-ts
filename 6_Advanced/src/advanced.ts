@@ -43,6 +43,8 @@ function toUpperCase(x: string | number) {
   return x;
 }
 
+const upperHello = toUpperCase; // これもオーバーロード
+
 // 2: in
 type NomadWorker = Engineer | Blogger;
 function describeProfile(nomadWorker: NomadWorker) {
