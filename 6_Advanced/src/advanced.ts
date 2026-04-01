@@ -45,6 +45,16 @@ function toUpperCase(x: string | number) {
 
 const upperHello = toUpperCase; // これもオーバーロード
 
+// 関数型のインターセクションはオーバーロードになる
+interface FuncA {
+  (a: number, b: string): number;
+  (a: string, b: number): number;
+}
+interface FuncB {
+  (a: string): number;
+}
+let intersectionFunc: FuncA & FuncB
+intersectionFunc = function (a: number | string, b?: string | number){return 0};
 // 2: in
 type NomadWorker = Engineer | Blogger;
 function describeProfile(nomadWorker: NomadWorker) {
