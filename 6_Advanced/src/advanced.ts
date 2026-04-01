@@ -138,7 +138,7 @@ const userData = downloadedData.user ?? "no-user"; // nullかundefinedの場合�
 
 // レストパラメータについて
 // function advancedFn (...args: number[]){ 書き方1
-function advancedFn (...args: [age: number, name: string, hasPets?: boolean, ...score: number[]]){ // 書き方2 タプル + レストパラメータもできる(Labeled Tuple)
+function advancedFn (...args: readonly [age: number, name: string, hasPets?: boolean, ...score: number[]]){ // 書き方2 タプル + レストパラメータもできる(Labeled Tuple)
 
 }
 advancedFn(1, 'hi', true);
