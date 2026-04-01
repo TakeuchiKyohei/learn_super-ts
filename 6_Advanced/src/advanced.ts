@@ -136,4 +136,11 @@ console.log(downloadedData.user?.name?.first);// ?をつけることでエラー
 // Nullish Coalescing
 const userData = downloadedData.user ?? "no-user"; // nullかundefinedの場合は"no-user"を返す
 
+// レストパラメータについて
+// function advancedFn (...args: number[]){ 書き方1
+function advancedFn (...args: [age: number, name: string, hasPets?: boolean, ...score: number[]]){ // 書き方2 タプル + レストパラメータもできる(Labeled Tuple)
+
+}
+advancedFn(1, 'hi', true);
+
 export {}; // 独立したものと扱うために一時的に追加
