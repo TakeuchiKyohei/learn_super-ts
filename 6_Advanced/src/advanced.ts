@@ -151,6 +151,8 @@ const peter = {
   age: 38,
 } as const; // 型は{name: "Peter", age: 38}になる
 
+// typeofの応用
+type PeterType = typeof peter; // {name: "Peter", age: 38}という型になる
 
 
 export {}; // 独立したものと扱うために一時的に追加
