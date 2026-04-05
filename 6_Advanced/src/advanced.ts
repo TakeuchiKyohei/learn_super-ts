@@ -154,5 +154,12 @@ const peter = {
 // typeofの応用
 type PeterType = typeof peter; // {name: "Peter", age: 38}という型になる
 
+// Symbolについて
+const symbol1 = Symbol();
+const symbol2 = Symbol();
+console.log(symbol1 === symbol2); // false
+function myFunc(symbol: symbol) {} //シンボルを型として扱える
+function myFunc1(symbol:typeof symbol1) {} //特定のシンボルを型として扱える
+
 
 export {}; // 独立したものと扱うために一時的に追加
