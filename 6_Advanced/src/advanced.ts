@@ -143,4 +143,14 @@ function advancedFn (...args: readonly [age: number, name: string, hasPets?: boo
 }
 advancedFn(1, 'hi', true);
 
+// as const
+let milk = "milk" as const; // 型は"milk"になる
+const array = [10, 20] as const; // 型はreadonly [10, 20]になる
+const peter = {
+  name: "Peter",
+  age: 38,
+} as const; // 型は{name: "Peter", age: 38}になる
+
+
+
 export {}; // 独立したものと扱うために一時的に追加
