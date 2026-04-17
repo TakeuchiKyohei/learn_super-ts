@@ -21,3 +21,7 @@ class LightDatabase {
 const stringDatabase = new LightDatabase();
 stringDatabase.add('Apple');
 console.log(stringDatabase.get());
+const tempDatabase = {
+    id: 1,
+    data: ['A', 'B', 'C']
+};

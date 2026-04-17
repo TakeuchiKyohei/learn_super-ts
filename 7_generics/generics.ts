@@ -18,3 +18,11 @@ class LightDatabase<T extends string | number | boolean> {
 const stringDatabase = new LightDatabase<string>();
 stringDatabase.add('Apple');
 console.log(stringDatabase.get());
+interface TempDataBase<T> {
+  id: number;
+  data: T[];
+}
+const tempDatabase: TempDataBase<string> = {
+  id: 1,
+  data: ['A', 'B', 'C']
+};
