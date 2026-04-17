@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function copy(value) {
+function copy(value, key) {
     return value;
 }
-console.log(copy({ name: "Taro" }));
+console.log(copy({ name: "Taro" }, "name"));
