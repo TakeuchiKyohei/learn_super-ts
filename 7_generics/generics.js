@@ -25,3 +25,12 @@ const tempDatabase = {
     id: 1,
     data: ['A', 'B', 'C']
 };
+const fetchData = new Promise(resolve => {
+    setTimeout(() => {
+        resolve("Data fetched");
+    }, 1000);
+});
+fetchData.then(data => {
+    data;
+});
+const vegetables = ["Tomato", "Cabbage", "Potato"];

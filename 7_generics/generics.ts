@@ -26,3 +26,20 @@ const tempDatabase: TempDataBase<string> = {
   id: 1,
   data: ['A', 'B', 'C']
 };
+
+interface Todo {
+  title: string;
+  text: string;
+}
+type Todoable = Partial<Todo>;
+type ReadonlyTodo = Readonly<Todo>;
+
+const fetchData: Promise<string> = new Promise(resolve => {
+  setTimeout(() => {
+    resolve("Data fetched");
+  }, 1000);
+});
+fetchData.then(data => {
+  data
+})
+const vegetables: Array<string> = ["Tomato", "Cabbage", "Potato"];
