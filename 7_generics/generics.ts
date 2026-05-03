@@ -49,3 +49,11 @@ interface ResponseData<T extends { message: string }= any> {
   status: number;
 }
 let temp2: ResponseData;
+
+interface Props {
+  readonly prop1: string;
+  prop2?: string;
+}
+type MappedType = {
+  -readonly[P in keyof Props]-?: string;
+}
