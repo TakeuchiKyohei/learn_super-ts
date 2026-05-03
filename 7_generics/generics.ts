@@ -43,3 +43,9 @@ fetchData.then(data => {
   data
 })
 const vegetables: Array<string> = ["Tomato", "Cabbage", "Potato"];
+
+interface ResponseData<T extends { message: string }= any> {
+  data: T;
+  status: number;
+}
+let temp2: ResponseData;

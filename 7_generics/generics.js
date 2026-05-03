@@ -34,3 +34,4 @@ fetchData.then(data => {
     data;
 });
 const vegetables = ["Tomato", "Cabbage", "Potato"];
+let temp2;
