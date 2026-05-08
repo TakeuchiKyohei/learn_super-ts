@@ -62,3 +62,8 @@ type ConditionalTypes = 'tomato' extends string ? number : boolean;
 type ConditionalTypesInfer = { tomato:string } extends {tomato:infer R } ? R : boolean;
 type DistributiveConditionalTypes<T> = T extends 'tomato' ? number : boolean;
 let temp4: DistributiveConditionalTypes<'tomato' | 'pumpkin'>
+
+// テンプレートリテラル型
+type FirstName = '山下' | '亀梨';
+type LastName = '智久' | '和也';
+type UserName = `${FirstName}-${LastName}`
